@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планеты Солнечной системы</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("space-bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #5472ce;
+            min-height: 100vh;
+        }
+
+        .top-menu {
+            width: 100%;
+            background: rgba(21, 27, 112, 0.692);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        .top-menu nav {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            color: #a1a8e2;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .top-menu a:hover {
+            color:#ffffff;
+            transform: scale(1.05);
+        }
+
+        .top-menu .active {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .container {
+            padding-top: 120px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 44px;
+            margin-bottom: 50px;
+            color: #a1c4ff;
+            text-shadow: 0 0 20px rgba(161, 196, 255, 0.6);
+        }
+
+        .planets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .planet-card {
+            background: rgba(20, 30, 90, 0.7);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(120, 160, 255, 0.4);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .planet-card:hover {
+            transform: translateY(-15px) scale(1.04);
+            box-shadow: 0 25px 50px rgba(80, 120, 255, 0.5);
+            border-color: rgba(100, 220, 255, 0.9);
+        }
+
+        .planet-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .planet-info {
+            padding: 20px;
+            color: #c8ddff;
+        }
+
+        .planet-info h2 {
+            margin: 0 0 12px 0;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        .planet-info p {
+            margin: 8px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .distance {
+            color: #6dafff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="планетыы.html" class="active">Планеты</a>
+            <a href="галереяя.html">Галерея</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Планеты Солнечной системы</h1>
+
+        <div class="planets-grid">
+
+            <div class="planet-card">
+                <img src="меркурий.jpg" alt="Меркурий" class="planet-img">
+                <div class="planet-info">
+                    <h2>Меркурий</h2>
+                    <p>Самая близкая к Солнцу планета.</p>
+                    <p class="distance">Расстояние от Солнца: ~58 млн км</p>
+                    <p>Один день длится 59 земных суток, а год — 88 дней.</p>
+                </div>
+            </div>
+
+            <div class="planet-card">
+                <img src="венера.jfif" alt="Венера" class="planet-img">
+                <div class="planet-info">
+                    <h2>Венера</h2>
+                    <p>Самая горячая планета (+460 °C).</p>
+                    <p class="distance">Расстояние от Солнца: ~108 млн км</p>
+                    <p>День длиннее года: 243 земных дня = 1 сутки, год — 225 дней.</p>
+                </div>
+            </div>
+
+            <div class="planet-card">
+                <img src="земля.jpeg" alt="Земля" class="planet-img">
+                <div class="planet-info">
+                    <h2>Земля</h2>
+                    <p>Наша родная планета — единственная с жидкой водой и жизнью (пока что).</p>
+                    <p class="distance">Расстояние от Солнца: ~150 млн км</p>
+                    <p>Имеет один большой спутник — Луну.</p>
+                </div>
+            </div>
+
+            <div class="planet-card">
+                <img src="марс.jpg" alt="Марс" class="planet-img">
+                <div class="planet-info">
+                    <h2>Марс</h2>
+                    <p>Красная планета. Есть самая высокая гора в Солнечной системе — Олимп (22 км).</p>
+                    <p class="distance">Расстояние от Солнца: ~228 млн км</p>
+                    <p>Сутки почти как на Земле — 24 ч 37 мин.</p>
+                </div>
+            </div>
+
+            <div class="planet-card">
+                <img src="юпитер.png" alt="Юпитер" class="planet-img">
+                <div class="planet-info">
+                    <h2>Юпитер</h2>
+                    <p>Самая большая планета. Большое Красное Пятно — шторм больше Земли.</p>
+                    <p class="distance">Расстояние от Солнца: ~778 млн км</p>
+                    <p>Имеет 95+ спутников, самый известный — Европа с подлёдным океаном.</p>
+                </div>
+            </div>
+
+            <div class="planet-card">
+                <img src="сатурн.jpg" alt="Сатурн" class="planet-img">
+                <div class="planet-info">
+                    <h2>Сатурн</h2>
+                    <p>Планета с потрясающими кольцами изо льда и камней.</p>
+                    <p class="distance">Расстояние от Солнца: ~1,4 млрд км</p>
+                    <p>Плотность меньше воды — теоретически мог бы плавать в гигантской ванне.</p>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+</body>
+</html>

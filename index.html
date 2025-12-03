@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос — Главная</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("space-bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #5472ce;
+        }
+
+        .top-menu {
+            width: 100%;
+            background: rgba(21, 27, 112, 0.692);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        .top-menu nav {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            color: #a1a8e2;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .top-menu a:hover {
+            color:#ffffff;
+            transform: scale(1.05);
+        }
+
+        .top-menu .active {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .welcome {
+            padding-top: 150px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        .welcome p {
+            font-size: 22px;
+        }
+
+        .article {
+            margin-top: 40px;
+            font-size: 20px;
+            line-height: 1.6;
+            background: rgba(136, 185, 241, 0.20);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(2px);
+            transition: 0.4s;
+        }
+
+        .article:hover {
+            transform: scale(1.02);
+            background: rgba(136, 185, 241, 0.35);
+            box-shadow: 0 0 25px rgba(170, 205, 255, 0.4);
+        }
+
+        .article h2 {
+            margin-top: 0;
+            font-size: 32px;
+            color: #184177;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        
+        .facts-section {
+            margin: 80px auto;
+            padding: 0 20px;
+            max-width: 1200px;
+        }
+
+        .facts-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #a1c4ff;
+            text-shadow: 0 0 20px rgba(161, 196, 255, 0.6);
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .fact-card {
+            background: rgba(20, 30, 90, 0.65);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(120, 160, 255, 0.4);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fact-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(100, 150, 255, 0.15), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(80, 120, 255, 0.4);
+            border-color: rgba(100, 200, 255, 0.8);
+        }
+
+        .fact-card:hover::before {
+            opacity: 1;
+        }
+
+        .fact-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 22px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .fact-card h3 svg {
+            width: 28px;
+            height: 28px;
+            fill: #6dafff;
+        }
+
+        .fact-card p {
+            margin: 0;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #c8ddff;
+        }
+
+        @media (max-width: 768px) {
+            .facts-grid {
+                grid-template-columns: 1fr;
+            }
+            .welcome {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="планетыы.html">Планеты</a>
+            <a href="галереяя.html">Галерея</a>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <h1>Добро пожаловать в космос</h1>
+        <p>Исследуй Вселенную вместе с нами!</p>
+
+        <div class="article">
+            <h2>Что такое космос?</h2>
+            <p>
+                Космос — это бескрайнее пространство, окружающее нашу планету. 
+                Он начинается там, где заканчивается атмосфера Земли, и простирается на миллиарды световых лет.
+                Это место, где рождаются и умирают звезды, формируются галактики и движутся 
+                колоссальные потоки энергии, которые невозможно представить человеческим глазом.
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>Почему космос так важен для человечества?</h2>
+            <p>
+                Наблюдая за космосом, мы изучаем наше прошлое, ведь свет от далёких звезд 
+                идёт к нам миллионы лет. Исследования Вселенной помогают нам понять происхождение 
+                планет, строение галактик и возможные условия для жизни за пределами Земли.
+            </p>
+            <p>
+                Космические технологии также применяются в повседневной жизни: навигация, связь, 
+                прогноз погоды, наблюдение за климатом. И каждый запуск ракеты приближает нас 
+                к ответу на главный вопрос: одиноки ли мы во Вселенной?
+            </p>
+        </div>
+
+        
+        <div class="facts-section">
+            <h2 class="facts-title">Невероятные факты о космосе</h2>
+
+            <div class="facts-grid">
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.332 1.209-6 5.844 1.416 8.263L12 18.897l-7.416 3.897 1.416-8.263-6-5.844 8.332-1.209z"/></svg>
+                        Самая горячая звезда
+                    </h3>
+                    <p>Звезда WR 102 имеет температуру поверхности около 210 000 °C — это в 38 раз горячее поверхности Солнца!</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        95% Вселенной — загадка
+                    </h3>
+                    <p>Около 27% — тёмная материя, 68% — тёмная энергия. Обычная материя (звёзды, планеты, мы) — всего 5%.</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5L17.5 18h-11L12 6.5z"/></svg>
+                        Нейтронная звезда
+                    </h3>
+                    <p>Одна чайная ложка вещества нейтронной звезды весила бы примерно как гора Эверест — около 1 миллиарда тонн!</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        Космос абсолютно тихий
+                    </h3>
+                    <p>Звук не распространяется в вакууме, поэтому даже взрыв сверхновой рядом был бы абсолютно бесшумным.</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Один день на Венере
+                    </h3>
+                    <p>День на Венере длится 243 земных суток, а год — всего 225. То есть день там длиннее года!</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5L17.5 18h-11L12 6.5z"/></svg>
+                        Самая большая структура
+                    </h3>
+                    <p>Великая стена Геркулес — Северная Корона — крупнейшая известная структура Вселенной, длиной 10 миллиардов световых лет.</p>
+                </div>
+
+            </div>
+        </div>
+        
+
+    </section>
+
+</body>
+</html>

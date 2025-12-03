@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея космоса</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("space-bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #a1c4ff;
+            min-height: 100vh;
+        }
+
+        .top-menu {
+            width: 100%;
+            background: rgba(21, 27, 112, 0.692);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        .top-menu nav {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            color: #a1a8e2;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .top-menu a:hover { color:#ffffff; transform: scale(1.05); }
+        .top-menu .active { color: #ffffff; font-weight: bold; }
+
+        .container {
+            padding-top: 120px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 46px;
+            margin-bottom: 60px;
+            text-shadow: 0 0 20px rgba(161, 196, 255, 0.7);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(100, 150, 255, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .gallery-item:hover .caption { opacity: 1; }
+
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 0 50px rgba(100, 180, 255, 0.6);
+            animation: zoom 0.6s;
+        }
+
+        @keyframes zoom {
+            from { transform: scale(0.4); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 50px;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .close:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="планетыы.html">Планеты</a>
+            <a href="галереяя.html" class="active">Галерея</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Галерея космоса</h1>
+
+        <div class="gallery">
+
+            
+
+            <a href="#img1" class="gallery-item">
+                <img src="вау.jpg" alt="Описание">
+                <div class="caption">Туманность и планета</div>
+            </a>
+
+            <a href="#img2" class="gallery-item">
+                <img src="космос для.webp" alt="Описание">
+                <div class="caption">Галактика Андромеда</div>
+            </a>
+
+        
+            
+            <a href="#img3" class="gallery-item">
+                <img src="космос галя.jfif" alt="">
+                <div class="caption">Подпись к фото</div>
+            </a>
+            
+
+        </div>
+    </div>
+
+    
+    <a href="#" class="lightbox" id="img1"><img src="твоя-первая-фотка.jpg"><span class="close">x</span></a>
+    <a href="#" class="lightbox" id="img2"><img src="твоя-вторая-фотка.jpg"><span class="close">x</span></a>
+    <!-- <a href="#" class="lightbox" id="img3"><img src="путь-к-твоей-фотке.jpg"><span class="close">x</span></a> -->
+
+</body>
+</html>
